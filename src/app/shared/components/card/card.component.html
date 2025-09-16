@@ -1,0 +1,9 @@
+<div class="kanban-card" cdkDrag>
+  <h4>{{ issue.title }}</h4>
+  <p *ngIf="issue.assignee"><strong>Assignee:</strong> {{ issue.assignee }}</p>
+  <p *ngIf="issue.dueDate"><strong>Due:</strong> {{ issue.dueDate | date }}</p>
+  <p><strong>Priority:</strong> {{ issue.priority || 'None' }}</p>
+  <p><strong>Labels:</strong> {{ issue.labels?.join(', ') || 'None' }}</p>
+
+
+</div>
